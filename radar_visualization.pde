@@ -13,9 +13,9 @@ void setup()
 
   smooth();
 
-  println(Serial.list());
+  println(Serial.list(8));
 
-  myPort = new Serial(this, Serial.list()[0], 9600);
+  myPort = new Serial(this, Serial.list(8)[0], 9600);
 
   myPort.bufferUntil('.');
 }
